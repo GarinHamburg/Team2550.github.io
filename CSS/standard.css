@@ -14,19 +14,23 @@ body {
 .logo {
     z-index: 3;
     position: absolute;
+    max-width: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%;
 }
 
 .redOverlay {
-    background-color: rgba(65, 0, 0, 1);
+    z-index: 2;
     position: fixed;
+    height: inherit;
+    width: 100%;
+    background-color: rgba(65, 0, 0, 0.75);
     display: block;
 }
 
 .background {
+    z-index: 1;
     height: inherit;
     background-image: url("https://garinhamburg.github.io/Team2550.github.io/Images/teamphoto24.JPG");
     background-size: cover;
