@@ -45,7 +45,7 @@ body {
     top: 65%;
     transform: translate(-50%, -65%);
     font-family: Arial; 
-    color: rgb(255, 215, 215);
+    background-color: rgb(255, 215, 215);
     border: none; 
     cursor: pointer; 
     width: 22%; 
