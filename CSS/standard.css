@@ -27,6 +27,30 @@ body {
     left: 50%;
     top: 65%;
     transform: translate(-50%, -65%);
+    font-family: Arial; 
+    background-color: white;
+    border: none; 
+    cursor: pointer; 
+    width: 20%; 
+    font-size: 15px;
+    height: 5%;
+    transition: 0.5s;
+}
+
+.sponsorButton:hover {
+    z-index: 3;
+    position: absolute;
+    max-width: 30%;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -65%);
+    font-family: Arial; 
+    color: rgb(255, 215, 215);
+    border: none; 
+    cursor: pointer; 
+    width: 22%; 
+    font-size: 15px;
+    height: 7%;
 }
 
 .redOverlay {
@@ -41,7 +65,7 @@ body {
 .background {
     z-index: 1;
     height: inherit;
-    background-image: url("https://garinhamburg.github.io/Team2550.github.io/Images/teamphoto24.JPG");
+    background-image: url("https://garinhamburg.github.io/Team2550.github.io/Images/teamphoto.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -64,6 +88,7 @@ body {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .menuIcon:hover{
