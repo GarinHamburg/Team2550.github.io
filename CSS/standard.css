@@ -16,8 +16,8 @@ body {
     position: absolute;
     max-width: 90%;
     left: 50%;
-    top: 45%;
-    transform: translate(-50%, -45%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sponsorButton {
@@ -25,8 +25,8 @@ body {
     position: absolute;
     max-width: 30%;
     left: 50%;
-    top: 55%;
-    transform: translate(-50%, -55%);
+    top: 65%;
+    transform: translate(-50%, -65%);
 }
 
 .redOverlay {
