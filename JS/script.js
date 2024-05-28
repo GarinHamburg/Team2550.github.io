@@ -37,7 +37,9 @@ function fExists() {
 
     img.className = 'sponsorLogo';
     var doc = document.getElementById("sponsorLogos");
+    var doc2 = document.getElementById("sponsorLogos2");
     doc.appendChild(img);
+    doc2.appendChild(img);
 }
 
 function fDoesntExist() {
