@@ -26,8 +26,6 @@ function loadImage() {
         img.onload = fExists;
         img.onerror = fDoesntExist;
         img.src = 'https://garinhamburg.github.io/Team2550.github.io/Images/SponsorLogos/' + i + '.png';
-        var doc = document.getElementById("sponsorLogos");
-        doc.appendChild(img)
     }
 
 }
@@ -36,6 +34,10 @@ function fExists() {
     imgArray.push(img);
     i++;
     bCheckEnabled = true;
+
+    img.className = 'sponsorLogo';
+    var doc = document.getElementById("sponsorLogos");
+    doc.appendChild(img);
 }
 
 function fDoesntExist() {

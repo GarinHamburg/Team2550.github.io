@@ -100,3 +100,15 @@ body {
     border-color: transparent;
     cursor: pointer;
 }
+
+.sponsorLogo {
+    height: 100px;
+    width: auto;
+    display: inline-block;
+}
+.sponsorLogo {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
