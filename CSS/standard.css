@@ -116,6 +116,7 @@ body {
     align-items: center;
     white-space: nowrap;
     animation: loop 30s linear infinite;
+    position: relative;
 }
 
 .sponsorLogos#sponsorLogos2 {
@@ -128,6 +129,7 @@ body {
     animation: loop 30s linear infinite;
     transform: translateX(100%);
     animation-delay: 15s; 
+    position: relative;
 }
 
 @keyframes loop {
