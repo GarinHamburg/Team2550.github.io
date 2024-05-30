@@ -35,11 +35,12 @@ function fExists() {
     i++;
     bCheckEnabled = true;
 
-    img.className = 'sponsorLogo';
-    var doc = document.getElementById("sponsorLogos");
-    doc.appendChild(img);
-    var doc2 = document.getElementById("sponsorLogos2");
-    doc2.appendChild(img);
+    img.className = 'item';
+    var imageObject = img;
+    var doc = document.getElementById("scroll-one");
+    doc.appendChild(imageObject);
+    var doc2 = document.getElementById("scroll-two");
+    doc2.appendChild(imageObject);
 }
 
 function fDoesntExist() {
