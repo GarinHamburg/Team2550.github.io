@@ -14,9 +14,9 @@ async function sponsorbar() {
         // For right now though, it works
         // -G
         for (var i = 0; i < parsedData.length; i++) {
-            var alt = data[i].alt;
-            var src = "https://garinhamburg.github.io/Team2550.github.io/Sponsors/SponsorLogos/" + data[i].image;
-            var url = data[i].url;
+            var alt = parsedData[i].alt;
+            var src = "https://garinhamburg.github.io/Team2550.github.io/Sponsors/SponsorLogos/" + parsedData[i].image;
+            var url = parsedData[i].url;
             var sponsorImage = new Image;
             sponsorImage.src = src;
             sponsorImage.alt = alt;
