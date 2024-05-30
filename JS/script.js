@@ -2,47 +2,32 @@ function SponsorButton() {
     location.href = "https://garinhamburg.github.io/Team2550.github.io/Sponsor";
 };
 
-var bCheckEnabled = true;
-var bFinishCheck = false;
 
-var img;
-var imgArray = new Array();
-var i = 0;
-
-var myInterval = setInterval(loadImage, 1);
-
-function loadImage() {
-
-    if (bFinishCheck) {
-        clearInterval(myInterval);
-        return;
-    }
-
-    if (bCheckEnabled) {
-
-        bCheckEnabled = false;
-
-        img = new Image();
-        img.onload = fExists;
-        img.onerror = fDoesntExist;
-        img.src = 'https://garinhamburg.github.io/Team2550.github.io/Images/SponsorLogos/' + i + '.png';
-    }
-
+const sponsorListURL =  "https://garinhamburg.github.io/Team2550.github.io/Sponsors/GoldSponsors.json";
+async function sponsorbar() {
+    try {
+        const fetched = await fetch(sponsorListURL);
+        const jsonData = await fetched.text();
+        const parsedData = JSON.parse(jsonData);
+        // This JSON parsing is very bad,
+        // Someone should overhall this
+        // For right now though, it works
+        // -G
+        for (var i = 0; i < parsedData.length; i++) {
+            var alt = data[i].alt;
+            var src = "https://garinhamburg.github.io/Team2550.github.io/Sponsors/SponsorLogos/" + data[i].image;
+            var url = data[i].url;
+            var sponsorImage = new Image;
+            sponsorImage.src = src;
+            sponsorImage.alt = alt;
+            sponsorImage.href = url;
+            var firstLoop = document.getElementById("scroll-one");
+            var secondLoop = document.getElementById("scroll-two");
+            firstLoop.appendChild(sponsorImage);
+            secondLoop.appendChild(sponsorImage);
+        } 
+    } catch (error) {
+        console.error('Unable to fetch sponsors', error);
+    } 
 }
-
-function fExists() {
-    imgArray.push(img);
-    i++;
-    bCheckEnabled = true;
-
-    img.className = 'item';
-    var imageObject = img;
-    var doc = document.getElementById("scroll-one");
-    doc.appendChild(imageObject);
-    var doc2 = document.getElementById("scroll-two");
-    doc2.appendChild(imageObject);
-}
-
-function fDoesntExist() {
-    bFinishCheck = true;
-}
+sponsorbar();
