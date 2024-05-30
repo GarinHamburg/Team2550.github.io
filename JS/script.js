@@ -26,9 +26,9 @@ async function sponsorbar() {
             var firstLoop = document.getElementById("scroll-one");
             var secondLoop = document.getElementById("scroll-two");
             if (url != null) {
-                var urlContainer = docuent.createElement("a");
+                var urlContainer = document.createElement("a");
                 urlContainer.href = url;
-                var urlContainer2 = docuent.createElement("a");
+                var urlContainer2 = document.createElement("a");
                 urlContainer2.href = url;
                 urlContainer.className = "item";
                 urlContainer2.className = "item";
