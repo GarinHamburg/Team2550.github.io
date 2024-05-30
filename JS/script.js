@@ -21,16 +21,27 @@ async function sponsorbar() {
             var sponsorImage2 = new Image;
             sponsorImage.src = src;
             sponsorImage.alt = alt;
-            sponsorImage.href = url;
-            sponsorImage.className = "item";
             sponsorImage2.src = src;
             sponsorImage2.alt = alt;
-            sponsorImage2.href = url;
-            sponsorImage2.className = "item";
             var firstLoop = document.getElementById("scroll-one");
             var secondLoop = document.getElementById("scroll-two");
-            firstLoop.appendChild(sponsorImage);
-            secondLoop.appendChild(sponsorImage2);
+            if (url != null) {
+                var urlContainer = docuent.createElement("a");
+                urlContainer.href = url;
+                var urlContainer2 = docuent.createElement("a");
+                urlContainer2.href = url;
+                urlContainer.className = "item";
+                urlContainer2.className = "item";
+                urlContainer.appendChild(sponsorImage);
+                urlContainer2.appendChild(sponsorImage2);
+                firstLoop.appendChild(urlContainer);
+                secondLoop.appendChild(urlContainer2);
+            } else {
+                sponsorImage.className = "item";
+                sponsorImage2.className = "item";
+                firstLoop.appendChild(sponsorImage);
+                secondLoop.appendChild(sponsorImage2);
+            }
         } 
     } catch (error) {
         console.error('Unable to fetch sponsors', error);
