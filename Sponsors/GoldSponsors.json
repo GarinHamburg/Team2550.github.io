@@ -1,22 +1,53 @@
 [
     {
+        "type": "name",
+        "alt": "Judy Rust",
+        "url": ""
+    },
+    {
+        "type": "logo",
         "alt": "Creative Platics",
-        "image": "0.png",
+        "image": "cpim.png",
         "url": "https://cpimi.com/"
     },
     {
+        "type": "name",
+        "alt": "Edwards Family",
+        "url": ""
+    },
+    {
+        "type": "logo",
         "alt": "Argosy Foundation",
-        "image": "1.png",
+        "image": "argosy.png",
         "url": "https://www.argosyfnd.org/"
     },
     {
+        "type": "logo",
         "alt": "LAM Research",
-        "image": "2.png",
+        "image": "lam.png",
         "url": "https://www.lamresearch.com/"
     },
     {
+        "type": "logo",
+        "alt": "Xerox",
+        "image": "xerox.png",
+        "url": "https://www.xerox.com/en-us"
+    },
+    {
+        "type": "name",
+        "alt": "TEL",
+        "url": ""
+    },
+    {
+        "type": "logo",
         "alt": "Witacker Ellis",
-        "image": "3.png",
+        "image": "we.png",
         "url": "https://www.whitakerellis.com/"
+    },
+    {
+        "type": "logo",
+        "alt": "United Health Group",
+        "image": "united.png",
+        "url": "https://www.unitedhealthgroup.com/"
     }
 ]
