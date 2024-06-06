@@ -12,8 +12,7 @@ async function serveBlog() {
             if (window.location.href.includes(parsedBlogData[i].date)) {
                 var title = parsedBlogData[i].title;
                 document.title = `Skynet | ${title}`;
-                var content = document.createElement("div");
-                content.className = "blog";
+                var content = document.getElementById("content");
 
                 var fetchedEntry = await fetch("https:///garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries/" + parsedBlogData[i].date + ".md");
                 var data = await fetchedEntry.text();
@@ -21,6 +20,7 @@ async function serveBlog() {
                 text.textContent = data;
 
                 content.appendChild(text);
+
             }
         } 
     } catch (error) {
