@@ -16,11 +16,8 @@ async function serveBlog() {
 
                 var fetchedEntry = await fetch("https:///garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries/" + parsedBlogData[i].date + ".md");
                 var data = await fetchedEntry.text();
-                var text = document.createElement("p");
-                text.textContent = data;
 
-                content.appendChild(text);
-
+                content.innerHTML = markdown(data);
             }
         } 
     } catch (error) {
