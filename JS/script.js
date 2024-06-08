@@ -81,3 +81,30 @@ async function sponsorbar() {
     } 
 }
 sponsorbar();
+
+
+const BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
+async function displayBlogs() {
+    try {
+        const fetchedBlog = await fetch(BlogEntriesURL);
+        const blogJsonData = await fetchedBlog.text();
+        const parsedBlogData = JSON.parse(blogJsonData);
+        for (var i = 0; i < parsedBlogData.length; i++) {
+            var blogEntry = new HTMLDivElement;
+            var blogImage = new Image;
+            var blogTitle = new HTMLParagraphElement;
+            blogTitle.textContent = parsedBlogData[i].title;
+            blogImage.src = "https:///garinhamburg.github.io/Team2550.github.io/Blog/BlogImages/" + parsedBlogData[i].date + "/" + parsedBlogData[i].previewImage;
+
+            blogEntry.appendChild(blogImage);
+            blogEntry.appendChild(blogTitle);
+
+            var blogFeed = document.getElementById("blogEntries");
+            blogFeed.appendChild(blogEntry);
+        } 
+    } catch (error) {
+        console.error('Unable to fetch Blog Entries', error);
+    } 
+}
+
+displayBlogs();

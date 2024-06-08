@@ -163,3 +163,17 @@ body {
     font-family: 'NEWACADEMY';
 }
 
+#blogEntries {
+    max-width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: auto, auto;
+    gap: 0px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+#blogEntries > div {
+    background-color: rgba(121, 121, 121, 0.5);
+    width:200px;
+}
