@@ -83,16 +83,16 @@ async function sponsorbar() {
 sponsorbar();
 
 
-const BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
+let BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
 async function displayBlogs() {
     try {
-        const fetchedBlog = await fetch(BlogEntriesURL);
-        const blogJsonData = await fetchedBlog.text();
-        const parsedBlogData = JSON.parse(blogJsonData);
+        let fetchedBlog = await fetch(BlogEntriesURL);
+        let blogJsonData = await fetchedBlog.text();
+        let parsedBlogData = JSON.parse(blogJsonData);
         for (var i = 0; i < parsedBlogData.length; i++) {
-            var blogEntry = new HTMLDivElement;
+            var blogEntry = document.createElement("div");
             var blogImage = new Image;
-            var blogTitle = new HTMLParagraphElement;
+            var blogTitle = document.createElement("p");
             blogTitle.textContent = parsedBlogData[i].title;
             blogImage.src = "https:///garinhamburg.github.io/Team2550.github.io/Blog/BlogImages/" + parsedBlogData[i].date + "/" + parsedBlogData[i].previewImage;
 

@@ -1,9 +1,9 @@
-const BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
+let BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
 async function serveBlog() {
     try {
-        const fetchedBlog = await fetch(BlogEntriesURL);
-        const blogJsonData = await fetchedBlog.text();
-        const parsedBlogData = JSON.parse(blogJsonData);
+        let fetchedBlog = await fetch(BlogEntriesURL);
+        let blogJsonData = await fetchedBlog.text();
+        let parsedBlogData = JSON.parse(blogJsonData);
         // This is also bad,
         // At some point style will need to be added.
         //
