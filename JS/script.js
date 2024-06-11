@@ -96,9 +96,10 @@ async function displayBlogs() {
             blogTitle.textContent = parsedBlogData[i].title;
             blogImage.src = "https:///garinhamburg.github.io/Team2550.github.io/Blog/BlogImages/" + parsedBlogData[i].date + "/" + parsedBlogData[i].previewImage;
 
-            blogEntry.appendChild(blogImage);
+            blogImage.href = "https:///garinhamburg.github.io/Team2550.github.io/blog?date=" + parsedBlogData[i].date;
             blogEntry.appendChild(blogTitle);
-
+            blogEntry.appendChild(blogImage);
+            
             var blogFeed = document.getElementById("blogEntries");
             blogFeed.appendChild(blogEntry);
         } 

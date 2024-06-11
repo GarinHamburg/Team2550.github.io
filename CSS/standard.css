@@ -110,7 +110,7 @@ body {
 
 #container {
     width: 100%;
-    height: 2.5rem;
+    height: 123px;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
@@ -118,7 +118,7 @@ body {
 }
 
 #container .scroll {
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -166,7 +166,6 @@ body {
 #blogEntries {
     max-width: 100%;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: auto, auto;
     gap: 0px;
@@ -174,6 +173,15 @@ body {
 }
 
 #blogEntries > div {
-    background-color: rgba(121, 121, 121, 0.5);
-    width:200px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+}
+ 
+#blogEntries > div > p {
+    position: absolute;
+    background: rgba(121, 121, 121, 0.5);
+    width: 200px;
+    font-family: monospace;
 }
