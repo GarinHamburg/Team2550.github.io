@@ -1,4 +1,4 @@
-let BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
+BlogEntriesURL =  "https://garinhamburg.github.io/Team2550.github.io/Blog/BlogEntries.json";
 async function serveBlog() {
     try {
         let fetchedBlog = await fetch(BlogEntriesURL);
