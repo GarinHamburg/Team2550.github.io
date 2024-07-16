@@ -4,6 +4,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+
+title: Team 2550 Skynet
 url: "https://garinhamburg.github.io/Team2550.github.io/"
 # Build settings
 theme: minima
