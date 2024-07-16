@@ -125,10 +125,11 @@ body {
     width: fit-content;
     white-space: nowrap;
     animation: loop 30s linear infinite;
+    transform: translateX(-100%);
 }
 
 #container .scroll#scroll-two {
-    transform: translateX(100%);
+    transform: translateX(0%);
     animation-delay: 15s; 
 }
 
@@ -176,7 +177,6 @@ body {
     width: 200px;
     height: 200px;
     overflow: hidden;
-    position: absolute;
 }
  
 #blogEntries > div > p {

@@ -1,28 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <title>Team 2550 Skynet | Home</title>
-        <link rel="stylesheet" href="https://garinhamburg.github.io/Team2550.github.io/CSS/standard.css">
-        <link rel="icon" href="https://garinhamburg.github.io/Team2550.github.io/Images/favicon.png">
-        <script src="https://garinhamburg.github.io/Team2550.github.io/JS/script.js"></script>
-    </head>
-    <body>
-        <div class="menu">
-            <button class="menuIcon" onclick="">☰</button>
+---
+layout: default
+title: "Home"
+---
+<div id="container">
+    <div id="scroll-one" class="scroll">
+    </div>
+    <div id="scroll-two" class="scroll">
+    </div>
+</div>
+<div class="blogEntries">
+    {%- for post in site.posts -%}
+        <img src="{% if post.image %}{{ post.image }}{% else %}{{ site.url }}/Images/skynet.png{% endif %}" class="blogImage">
+        <div class="blogTitle">
+            <p href="{{ post.permalink }}">{{ post.title }}</a>
         </div>
-        <div class="header">
-            <img class="logo" src="https://garinhamburg.github.io/Team2550.github.io/Images/logo.png">
-            <button class="sponsorButton" onclick="SponsorButton()">Sponsor Us</button>
-            <div class="redOverlay"></div>
-            <div class="background"></div>
-        </div>
-        <div id="container">
-            <div id="scroll-one" class="scroll">
-            </div>
-            <div id="scroll-two" class="scroll">
-            </div>
-        </div>
-        <div id="blogEntries">
-        </div>
-    </body>
-</html>
+    {%- endfor -%}
+</div>

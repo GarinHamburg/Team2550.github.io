@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ site.url }}/CSS/standard.css">
+		<link rel="icon" href="{{ site.url }}/Images/favicon.png">
+		<title>{{ page.title }}</title>
+        <script src="{{ site.url }}/JS/script.js"></script>
+    </head>
+    <body>
+        <div class="menu">
+            <button class="menuIcon" onclick="">☰</button>
+        </div>
+        <div class="header" style="height:200px">
+            <img class="logo" src="https://garinhamburg.github.io/Team2550.github.io/Images/logo.png">
+            <div class="redOverlay" style="height: 200px"></div>
+            <div class="background" style="height: 200px"></div>
+        </div>
+        <div id="content">{%- if page.markdown != false -%}{{ page.main-text | markdownify }}{%- else -%}{{ page.main-text }}{%- endif -%}</div>
+    </body>
+</html>
