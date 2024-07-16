@@ -6,6 +6,8 @@
 
 
 title: Team 2550 Skynet
+description:
+baseurl: "https://garinhamburg.github.io/Team2550.github.io/"
 url: "https://garinhamburg.github.io/Team2550.github.io/"
 # Build settings
 theme: minima
